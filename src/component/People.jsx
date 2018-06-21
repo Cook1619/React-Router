@@ -28,11 +28,13 @@ class People extends Component {
                 <ul>
                     {this.state.people.map((people) => {
                         return (
-                            <li key={people.id}>
-                                {people.name}, 
-                                {people.age}, 
-                                {people.gender}
-                            </li>
+                            <div key={people.id}>
+                                <h4 className="mt-4">{people.name}</h4>
+                                <ul>
+                                    <li>{people.age}</li>
+                                    <li>{people.gender}</li>
+                                </ul>
+                            </div>
                         );
                     })}
                 </ul>

@@ -28,10 +28,10 @@ class Films extends Component {
                 <ul>
                     {this.state.films.map((film) => {
                         return (
-                            <li key={film.id}>
-                                {film.title}  
-                                {film.description}
-                            </li>
+                            <div key={film.id}>
+                                <h4 className="mt-4">{film.title}</h4>
+                                <p>{film.description}</p>
+                            </div>
                         );
                     })}
                 </ul>

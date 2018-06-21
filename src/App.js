@@ -16,6 +16,7 @@ class App extends Component {
             <Route exact path="/" component={HomePage} />
             <Route exact path="/films" component={Films} />
             <Route exact path="/people" component={People} />
+            <Route exact path="/films/:id" component={Films} />
           </Switch>
         </Fragment>
       </Router>
