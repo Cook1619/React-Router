@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from 'react';
-
+import { BrowserRouter as Router, Link, Switch, Route } from 'react-router-dom';
 
 const Base_URL = 'https://ghibliapi.herokuapp.com/films';
 class Films extends Component {
@@ -27,9 +27,10 @@ class Films extends Component {
                 <h1 className="text-center">Films</h1>
                 <ul>
                     {this.state.films.map((film) => {
+                        let URLDest = "/film/" + film.id;
                         return (
                             <div key={film.id}>
-                                <h4 className="mt-4">{film.title}</h4>
+                                <Link to={URLDest} key={film.id}><h4 className="mt-4">{film.title}</h4></Link>
                                 <p>{film.description}</p>
                             </div>
                         );
