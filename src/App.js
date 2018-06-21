@@ -11,7 +11,7 @@ class App extends Component {
           <Link to="/films">Films</Link>
           <Link to="/people">People</Link>
           <Switch>
-            <Route exact path="/" component={}/>
+           
             <Route exact path="/films" component={Films}/>
             <Route exact path="/people" component={People}/>
           </Switch>

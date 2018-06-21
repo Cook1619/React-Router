@@ -7,11 +7,11 @@ class People extends Component {
     }
     render() {
         return (
-            <Router>
-                <Fragment>
-                    
-                </Fragment>
-            </Router>
+            <React.Router>
+                <React.Fragment>
+                    <h1>Hi</h1>
+                </React.Fragment>
+            </React.Router>
         )
     }
 }
