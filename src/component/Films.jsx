@@ -1,5 +1,6 @@
 import React, { Component, Fragment } from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
+
 const Base_URL = 'https://ghibliapi.herokuapp.com/films';
 class Films extends Component {
     constructor(props) {
@@ -9,7 +10,6 @@ class Films extends Component {
         }
 
         this.componentDidMount = async () => {
-            fetch("https://ghibliapi.herokuapp.com/films")
             try {
                 let res = await fetch(`${Base_URL}`);
                 let data = await res.json();

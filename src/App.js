@@ -9,8 +9,8 @@ class App extends Component {
       <Router>
         <Fragment>
           <Link to="/">Home</Link>
-          <Link to="/films">Films</Link>
-          <Link to="/people">People</Link>
+          <Link to="/films"><button className="d-flex mx-auto btn btn-ghost center-block m-4">Films</button></Link>
+          <Link to="/people"><button className="d-flex mx-auto btn btn-ghost center-block m-4">People</button></Link>
           <Switch>
             
             <Route exact path="/films" component={Films} />
