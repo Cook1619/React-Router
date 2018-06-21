@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-
+import React, { Component, Fragment } from 'react';
+import { BrowserRouter as Router } from 'react-router-dom';
 const Base_URL = 'https://ghibliapi.herokuapp.com/films';
 class Films extends Component {
     constructor(props) {
@@ -16,7 +16,6 @@ class Films extends Component {
                 console.log(data);
                 this.setState({
                     list: data,
-                    type: 'movies'
                 })
             } catch (e) {
                 console.log(e);
@@ -26,11 +25,11 @@ class Films extends Component {
 
     render() {
         return (
-            <React.Router>
-                <React.Fragment>
+            <Router>
+                <Fragment>
                     <h1>Hi</h1>
-                </React.Fragment>
-            </React.Router>
+                </Fragment>
+            </Router>
         )
     }
 }

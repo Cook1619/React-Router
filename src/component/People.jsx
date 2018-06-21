@@ -1,4 +1,5 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
+import { BrowserRouter as Router } from 'react-router-dom';
 
 class People extends Component {
 
@@ -7,11 +8,11 @@ class People extends Component {
     }
     render() {
         return (
-            <React.Router>
-                <React.Fragment>
+            <Router>
+                <Fragment>
                     <h1>Hi</h1>
-                </React.Fragment>
-            </React.Router>
+                </Fragment>
+            </Router>
         )
     }
 }
