@@ -14,9 +14,8 @@ class Films extends Component {
         try {
             let res = await fetch(`${Base_URL}`);
             let data = await res.json();
-            console.log(data);
             this.setState({
-                list: data,
+                films: data,
             })
         } catch (e) {
             console.log(e);
@@ -29,9 +28,9 @@ class Films extends Component {
                 <Fragment>
                     <h1>Films</h1>
                     <ul>
-                        {this.state.data.map(data => {
-                            <li key={this.state.data.id}>
-                            {this.state.data.title}{this.state.data.description}
+                        {this.state.films.map(() => {
+                            <li key={this.state.films.id}>
+                                {this.state.films.title}{this.state.films.description}
                             </li>
                         })}
                     </ul>
