@@ -24,12 +24,12 @@ class Films extends Component {
     render() {
         return (
             <Fragment>
-                <h1>Films</h1>
+                <h1 className="text-center">Films</h1>
                 <ul>
                     {this.state.films.map((film) => {
                         return (
                             <li key={film.id}>
-                                {film.title}
+                                {film.title}  
                                 {film.description}
                             </li>
                         );

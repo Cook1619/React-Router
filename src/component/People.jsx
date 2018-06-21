@@ -24,7 +24,7 @@ class People extends Component {
     render() {
         return (
             <Fragment>
-                <h1>People</h1>
+                <h1 className="text-center">People</h1>
                 <ul>
                     {this.state.people.map((people) => {
                         return (
