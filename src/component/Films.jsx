@@ -29,7 +29,7 @@ class Films extends Component {
                     {this.state.films.map((film) => {
                         let URLDest = "/film/" + film.id;
                         return (
-                            <div key={film.id}>
+                            <div>
                                 <Link to={URLDest} key={film.id}><h4 className="mt-4">{film.title}</h4></Link>
                                 <p>{film.description}</p>
                             </div>
