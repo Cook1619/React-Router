@@ -24,12 +24,15 @@ class People extends Component {
     render() {
         return (
             <Fragment>
-                <h1 className="text-center">People</h1>
+                <div className="jumbotron">
+                    <h1 className="text-center display-4">People</h1>
+                    <hr className="my-4"/>
+                </div>
                 <ul>
                     {this.state.people.map((people) => {
                         return (
                             <div key={people.id}>
-                                <h4 className="mt-4">{people.name}</h4>
+                                <h4 className="my-4">{people.name}</h4>
                                 <ul>
                                     <li>{people.age}</li>
                                     <li>{people.gender}</li>
