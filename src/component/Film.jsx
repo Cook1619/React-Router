@@ -1,34 +1,16 @@
-import React, { Component, Fragment } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 
-const Base_URL = 'https://ghibliapi.herokuapp.com/films';
-class Film extends Component {
-    constructor(props) {
-        super(props);
-        console.log(props.id)
-        this.state = {
-            film: []
-        }
-    }
-    componentDidMount = async () => {
-        try {
-            let res = await fetch(`${Base_URL}/id`);
-            let data = await res.json();
-            this.setState({
-                film: data,
-            })
-        } catch (e) {
-            console.log(e);
-        }
-    }
-
-    render() {
-        return (
-            <Fragment>
-                
-            </Fragment>
-        );
-    }
+const Film = (props) => {
+    return (
+        <div className="card">
+            <div className="card-body">
+                <h5 className="card-title">{props.filmData.title}</h5>
+                <p className="card-text">{props.filmData.description}</p>
+                <Link className="btn btn primary" to={`/films/${props.filmData.id}`}>Read More</Link>
+            </div>
+        </div>
+    )
 }
 
 export default Film;

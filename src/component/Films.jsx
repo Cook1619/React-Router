@@ -1,6 +1,7 @@
 import React, { Component, Fragment } from 'react';
+import Film from './Film'
 import { Link } from 'react-router-dom';
-import Film from './Film';
+
 
 const Base_URL = 'https://ghibliapi.herokuapp.com/films';
 class Films extends Component {
@@ -23,26 +24,19 @@ class Films extends Component {
     }
 
     render() {
+        let filmList = this.state.films.map((film) => {
+            return <Film key={film.id} filmData={film} />
+        });
         return (
             <Fragment>
-            <div className="jumbotron">
-                <h1 className="text-center display-4">Films</h1>
+                <div className="jumbotron">
+                    <h1 className="text-center display-4">Films</h1>
                     <hr className="my-4" />
                 </div>
-                <ul>
-                    {this.state.films.map((film) => {
-                        let URLDest = "/film/" + film.id;
-                        return (
-                            <div>
-                                <Link to={URLDest} key={film.id}><h4 className="mt-4">{film.title}</h4></Link>
-                                <p>{film.description}</p>
-                                <Film movie={film.id} />
-                            </div>
-                        );
-                    })}
-                </ul>
+                <div>{filmList}</div>
             </Fragment>
-        );
+
+        )
     }
 }
 
