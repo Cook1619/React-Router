@@ -1,6 +1,5 @@
 import React, { Component, Fragment } from 'react';
 import Film from './Film'
-import { Link } from 'react-router-dom';
 
 
 const Base_URL = 'https://ghibliapi.herokuapp.com/films';
