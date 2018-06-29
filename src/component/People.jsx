@@ -1,6 +1,5 @@
 import React, { Component, Fragment } from 'react';
-import { Link } from 'react-router-dom';
-
+import PersonDetails from './PersonDetails';
 const Base_URL = 'https://ghibliapi.herokuapp.com/people';
 
 class People extends Component {
@@ -23,26 +22,16 @@ class People extends Component {
     }
 
     render() {
+        let peopleList = this.state.people.map((person) =>{
+            return <PersonDetails key="person.id" PersonData={person} />
+        })
         return (
             <Fragment>
                 <div className="jumbotron">
                     <h1 className="text-center display-4">People</h1>
                     <hr className="my-4"/>
                 </div>
-                <ul>
-                    {this.state.people.map((people) => {
-                        let URLDest = "/people/" + people.id;
-                        return (
-                            <div key={people.id}>
-                                <Link to={URLDest} key={people.id}><h4 className="mt-4">{people.name}</h4></Link>
-                                <ul>
-                                    <li>{people.age}</li>
-                                    <li>{people.gender}</li>
-                                </ul>
-                            </div>
-                        );
-                    })}
-                </ul>
+                {peopleList}
             </Fragment>
         );
     }

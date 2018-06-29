@@ -25,11 +25,11 @@ class Film extends Component {
         return (
             <Fragment>
                 <div class="card">
-                    <h3 class="card-header bg-info col-12 mt-4 text-center">{this.state.film.title}</h3>
-                    <div class="card-body">{this.state.film.director}</div>
-                    <div class="card-body">{this.state.film.release_date}</div>
-                    <div class="card-body">{this.state.film.producer}</div>
-                    <div class="card-body">{this.state.film.description}</div>
+                    <h3 class="card-header bg-info col-12 mt-4 text-center">Title: {this.state.film.title}</h3>
+                    <div class="card-body">Director: {this.state.film.director}</div>
+                    <div class="card-body">Release Date: {this.state.film.release_date}</div>
+                    <div class="card-body">Producer: {this.state.film.producer}</div>
+                    <div class="card-body">Plot: {this.state.film.description}</div>
                 </div>
             </Fragment>
         )

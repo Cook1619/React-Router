@@ -4,6 +4,7 @@ import People from './component/People.jsx'
 import Films from './component/Films.jsx'
 import HomePage from './component/HomePage.jsx'
 import Film from './component/Film.jsx';
+import Person from './component/Person.jsx'
 
 class App extends Component {
   render() {
@@ -20,6 +21,7 @@ class App extends Component {
             <Route exact path="/films" component={Films} />
             <Route exact path="/people" component={People} />
             <Route path="/film/:id" component={Film} />
+            <Route path="/person/:id" component={Person} />
           </Switch>
         </Fragment>
       </Router>
