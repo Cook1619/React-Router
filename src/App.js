@@ -11,15 +11,15 @@ class App extends Component {
       <Router>
         <Fragment>
           <nav className="navbar navbar-dark bg-dark">
-            <Link className="d-flex mx-auto btn btn-ghost center-block m-4" to="/">Home Page</Link>
-            <Link className="d-flex mx-auto btn btn-ghost center-block m-4" to="/films">View Films</Link>
-            <Link className="d-flex mx-auto btn btn-ghost center-block m-4" to="/people">View People</Link>
+            <Link className="d-flex mx-auto btn btn-info center-block m-4" to="/">Home Page</Link>
+            <Link className="d-flex mx-auto btn btn-info center-block m-4" to="/films">View Films</Link>
+            <Link className="d-flex mx-auto btn btn-info center-block m-4" to="/people">View People</Link>
           </nav>
           <Switch>
             <Route exact path="/" component={HomePage} />
             <Route exact path="/films" component={Films} />
             <Route exact path="/people" component={People} />
-            <Route exact path="/films/:id" component={Film} />
+            <Route path="/film/:id" component={Film} />
           </Switch>
         </Fragment>
       </Router>

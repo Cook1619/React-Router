@@ -14,6 +14,7 @@ class Films extends Component {
         try {
             let res = await fetch(`${Base_URL}`);
             let data = await res.json();
+            console.log(data);
             this.setState({
                 films: data,
             })
