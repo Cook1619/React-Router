@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from 'react';
 
-const BASE_URL = 'https://ghibliapi.herokuapp.com/films';
+const BASE_URL = 'https://ghibliapi.herokuapp.com/films/';
 
 class Film extends Component {
     constructor(props) {
@@ -11,10 +11,11 @@ class Film extends Component {
     }
     componentDidMount = async () => {
         try {
-            let res = await fetch(`${Base_URL} + props.match.params.id`);
+            let res = await fetch(`${BASE_URL} + props.match.params.id`);
             let data = await res.json();
+            console.log(data);
             this.setState({
-                films: data,
+                film: data,
             })
         } catch (e) {
             console.log(e);
@@ -23,9 +24,11 @@ class Film extends Component {
     render() {
         return (
             <Fragment>
-            {this.state.film.title}
+                <h1>{this.state.film.title}</h1>
             </Fragment>
         )
 
     }
 }
+
+export default Film;
