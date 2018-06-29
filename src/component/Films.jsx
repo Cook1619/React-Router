@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from 'react';
-import Film from './Film'
+import FilmDetails from './FilmDetails'
 
 
 const Base_URL = 'https://ghibliapi.herokuapp.com/films';
@@ -24,7 +24,7 @@ class Films extends Component {
 
     render() {
         let filmList = this.state.films.map((film) => {
-            return <Film key={film.id} filmData={film} />
+            return <FilmDetails key={film.id} filmData={film} />
         });
         return (
             <Fragment>
@@ -32,7 +32,7 @@ class Films extends Component {
                     <h1 className="text-center display-4">Films</h1>
                     <hr className="my-4" />
                 </div>
-                <div>{filmList}</div>
+                {filmList}
             </Fragment>
 
         )
