@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from 'react';
 
-BASE_URL = 'https://ghibliapi.herokuapp.com/films';
+const BASE_URL = 'https://ghibliapi.herokuapp.com/films';
 
 class Film extends Component {
     constructor(props) {
@@ -22,8 +22,10 @@ class Film extends Component {
     }
     render() {
         return (
-
-    )
+            <Fragment>
+            {this.state.film.title}
+            </Fragment>
+        )
 
     }
 }
