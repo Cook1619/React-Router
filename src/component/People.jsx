@@ -23,7 +23,7 @@ class People extends Component {
 
     render() {
         let peopleList = this.state.people.map((person) =>{
-            return <PersonDetails key="person.id" PersonData={person} />
+            return <PersonDetails key={person.id} PersonData={person} />
         })
         return (
             <Fragment>

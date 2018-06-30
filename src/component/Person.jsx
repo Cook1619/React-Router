@@ -24,12 +24,12 @@ class Person extends Component {
     render() {
         return (
             <Fragment>
-                <div class="card">
-                    <h3 class="card-header bg-info col-12 mt-4 text-center">Name: {this.state.person.name}</h3>
-                    <div class="card-body">Gender: {this.state.person.gender}</div>
-                    <div class="card-body">Age: {this.state.person.age}</div>
-                    <div class="card-body">Eye Color: {this.state.person.eye_color}</div>
-                    <div class="card-body">Hair Color: {this.state.person.hair_color}</div>
+                <div className="card">
+                    <h3 className="card-header bg-info col-12 mt-4 text-center">Name: {this.state.person.name}</h3>
+                    <div className="card-body">Gender: {this.state.person.gender}</div>
+                    <div className="card-body">Age: {this.state.person.age}</div>
+                    <div className="card-body">Eye Color: {this.state.person.eye_color}</div>
+                    <div className="card-body">Hair Color: {this.state.person.hair_color}</div>
                 </div>
             </Fragment>
         )
